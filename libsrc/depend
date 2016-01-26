@@ -1,0 +1,62 @@
+console.o: console/console.c ../include/ds2io.h console/font_dot.h
+cache.o: fs/cache.c fs/fs_common.h fs/fs_cache.h fs/disc_io/disc_io.h \
+  fs/disc_io/../fs_common.h fs/disc_io/disc.h fs/disc_io/disc_io.h \
+  fs/mem_allocate.h ../include/ds2_malloc.h
+directory.o: fs/directory.c fs/directory.h fs/fs_common.h fs/partition.h \
+  fs/disc_io/disc.h fs/disc_io/../fs_common.h fs/disc_io/disc_io.h \
+  fs/fs_cache.h fs/disc_io/disc_io.h fs/file_allocation_table.h \
+  fs/bit_ops.h fs/filetime.h fs/fs_unicode.h
+fatdir.o: fs/fatdir.c fs/fatdir.h fs/fs_common.h fs/directory.h \
+  fs/partition.h fs/disc_io/disc.h fs/disc_io/../fs_common.h \
+  fs/disc_io/disc_io.h fs/fs_cache.h fs/disc_io/disc_io.h \
+  fs/file_allocation_table.h fs/bit_ops.h fs/filetime.h fs/fs_unicode.h
+fatfile.o: fs/fatfile.c fs/fatfile.h fs/fs_common.h fs/partition.h \
+  fs/disc_io/disc.h fs/disc_io/../fs_common.h fs/disc_io/disc_io.h \
+  fs/fs_cache.h fs/disc_io/disc_io.h fs/directory.h \
+  fs/file_allocation_table.h fs/bit_ops.h fs/filetime.h
+file_allocation_table.o: fs/file_allocation_table.c \
+  fs/file_allocation_table.h fs/fs_common.h fs/partition.h \
+  fs/disc_io/disc.h fs/disc_io/../fs_common.h fs/disc_io/disc_io.h \
+  fs/fs_cache.h fs/disc_io/disc_io.h
+filetime.o: fs/filetime.c fs/filetime.h fs/fs_common.h ../include/ds2io.h
+fs_api.o: fs/fs_api.c fs/fs_common.h fs/fatfile.h fs/partition.h \
+  fs/disc_io/disc.h fs/disc_io/../fs_common.h fs/disc_io/disc_io.h \
+  fs/fs_cache.h fs/disc_io/disc_io.h fs/directory.h fs/fatdir.h
+fs_unicode.o: fs/fs_unicode.c fs/fs_common.h
+libfat.o: fs/libfat.c fs/fs_common.h fs/partition.h fs/disc_io/disc.h \
+  fs/disc_io/../fs_common.h fs/disc_io/disc_io.h fs/fs_cache.h \
+  fs/disc_io/disc_io.h fs/fatfile.h fs/directory.h fs/fatdir.h \
+  fs/fs_unicode.h fs/disc_io/io_ds2_mmcf.h ../include/ds2_mmc_api.h
+partition.o: fs/partition.c fs/partition.h fs/fs_common.h \
+  fs/disc_io/disc.h fs/disc_io/../fs_common.h fs/disc_io/disc_io.h \
+  fs/fs_cache.h fs/disc_io/disc_io.h fs/bit_ops.h \
+  fs/file_allocation_table.h fs/directory.h fs/mem_allocate.h \
+  ../include/ds2_malloc.h
+fat_misc.o: fs/fat_misc.c fs/fat_misc.h fs/fs_common.h fs/directory.h \
+  fs/partition.h fs/disc_io/disc.h fs/disc_io/../fs_common.h \
+  fs/disc_io/disc_io.h fs/fs_cache.h fs/disc_io/disc_io.h fs/fs_api.h \
+  fs/fatfile.h fs/fatdir.h
+disc.o: fs/disc_io/disc.c fs/disc_io/disc.h fs/disc_io/../fs_common.h \
+  fs/disc_io/disc_io.h fs/disc_io/io_ds2_mmcf.h ../include/ds2_mmc_api.h
+io_ds2_mmcf.o: fs/disc_io/io_ds2_mmcf.c fs/disc_io/io_ds2_mmcf.h \
+  fs/disc_io/disc_io.h fs/disc_io/../fs_common.h ../include/ds2_mmc_api.h
+key.o: key/key.c ../include/ds2_timer.h ../include/ds2io.h
+adler32.o: zlib/adler32.c zlib/zlib.h zlib/zconf.h
+compress.o: zlib/compress.c zlib/zlib.h zlib/zconf.h
+crc32.o: zlib/crc32.c zlib/zutil.h zlib/zlib.h zlib/zconf.h zlib/crc32.h
+deflate.o: zlib/deflate.c zlib/deflate.h zlib/zutil.h zlib/zlib.h \
+  zlib/zconf.h
+gzio.o: zlib/gzio.c zlib/zutil.h zlib/zlib.h zlib/zconf.h
+infback.o: zlib/infback.c zlib/zutil.h zlib/zlib.h zlib/zconf.h \
+  zlib/inftrees.h zlib/inflate.h zlib/inffast.h zlib/inffixed.h
+inffast.o: zlib/inffast.c zlib/zutil.h zlib/zlib.h zlib/zconf.h \
+  zlib/inftrees.h zlib/inflate.h zlib/inffast.h
+inflate.o: zlib/inflate.c zlib/zutil.h zlib/zlib.h zlib/zconf.h \
+  zlib/inftrees.h zlib/inflate.h zlib/inffast.h zlib/inffixed.h
+inftrees.o: zlib/inftrees.c zlib/zutil.h zlib/zlib.h zlib/zconf.h \
+  zlib/inftrees.h
+trees.o: zlib/trees.c zlib/deflate.h zlib/zutil.h zlib/zlib.h \
+  zlib/zconf.h zlib/trees.h
+uncompr.o: zlib/uncompr.c zlib/zlib.h zlib/zconf.h
+zutil.o: zlib/zutil.c zlib/zutil.h zlib/zlib.h zlib/zconf.h \
+  ../include/ds2_malloc.h

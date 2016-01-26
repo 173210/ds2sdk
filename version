@@ -1,0 +1,15 @@
+2010.10.10
+ds2sdk 0.12beta
+fixed serval bugs on file system
+fixed the bug in ds2_getrawInput function
+using float point algorithm to improve accuracy of timer
+added ds2io_initb
+
+2010.8.6
+ds2sdk 0.11beta
+fixed bug of ds2_init() function in libds2b.a
+
+2010.7.23
+ds2sdk 0.1beta
+the original beta version
+this version do not employ any OS
